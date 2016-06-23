@@ -1,0 +1,14 @@
+﻿1，新建一个1.44M的软盘镜像，在虚拟机中mkfs.vfat文件系统，并mount至任意目录
+2，将linux的grub的stage1和stage2文件拷贝至软盘下的/boot/grub
+3，在软盘/boot/grub目录下新建menu.lst文件，并按照规则编写
+    如
+    default 0
+    timeout 0
+    title Tinix OS
+    root (fd0)
+    kernel /boot/oskernel
+4，将软盘umount，但不要关闭软驱
+5，在linux启动grub
+    root (fd0)
+    setup (fd0)
+6，此时已制作完成，可在windows下利用winimage编辑该软盘将编译好的内核和应用加入

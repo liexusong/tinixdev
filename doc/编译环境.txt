@@ -1,0 +1,8 @@
+windows
+    1, 安装cygwin
+    2, 安装gcc for cygwin
+    3, 安装gnu make for cygwin
+    4, 将cygwin的各个bin目录加入windows的path环境变量中
+    5, 运行build.bat
+linux
+    运行shell脚本lbuild
